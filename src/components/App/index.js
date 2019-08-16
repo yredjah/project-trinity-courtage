@@ -1,5 +1,6 @@
 // == Import : npm
 import React from 'react';
+import { Route } from 'react-router-dom';
 
 import Header from 'src/components/Header';
 import Body from 'src/components/Body';
@@ -11,9 +12,9 @@ import './app.scss';
 // == Composant
 const App = () => (
   <div id="app">
-    <Header />
-    <Body />
-    <Footer />
+      <Header />
+      <Body />
+      <Footer />
   </div>
 );
 

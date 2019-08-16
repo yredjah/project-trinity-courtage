@@ -21,20 +21,36 @@ class Header extends Component {
         <div className="container-header" >
           <h1 id="title"><img className="logo" src={logo} alt="" /></h1>
           <div className="nav">
-            <Menu>
-              <Menu.Item>
-                <Button primary>Qui sommes nous ?</Button>
-              </Menu.Item>
-              <Menu.Item>
-                <Button primary>Assurances</Button>
-              </Menu.Item>
-              <Menu.Item>
-                <Button primary>Placement financier</Button>
-              </Menu.Item>
-              <Menu.Item>
-                <Button primary>Immobilier</Button>
-              </Menu.Item>
-            </Menu>
+            <Segment inverted>
+              <Menu inverted secondary size='small'>
+                <Menu.Item
+                  name='assurances'
+                  active={activeItem === 'assurances'}
+                  onClick={this.handleItemClick}
+                  className="menu-nav"
+                >
+                  Assurances
+                </Menu.Item>
+
+                <Menu.Item 
+                  name='placement-financier' 
+                  active={activeItem === 'placement-financier'} 
+                  onClick={this.handleItemClick}
+                  className="menu-nav"
+                >
+                  Placement financier
+                </Menu.Item>
+
+                <Menu.Item
+                  name='immobilier'
+                  active={activeItem === 'immobilier'}
+                  onClick={this.handleItemClick}
+                  className="menu-nav"
+                >
+                  Immobilier
+                </Menu.Item>
+              </Menu>
+            </Segment>
           </div>
         </div>
       </div>

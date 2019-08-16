@@ -3,13 +3,28 @@
   height: 10%;
   background-image: url('/assets/img/eau.jpeg');
   background-size: cover;
+  @media screen and (max-width: 1000px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 
 .nav {
   display: flex;
   justify-content: center;
-  margin-top: 2%;
+  margin-top: 1%;
   margin-bottom: 1%;
+  
+  @media screen and (max-width: 1000px) {
+    width: 90% !important;
+    font-size: 30% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-top: 30px;
+    padding: 2% !important;
+    margin: 5% !important;
+  }
 }
 
 #title {
@@ -21,4 +36,16 @@
   padding: 2%;
   width: 20%;
   height: 10%;
+  @media screen and (max-width: 1000px) {
+    width: 50%;
+    height: 25%;
+  }
+}
+
+.menu-nav {
+  color: #03224c !important;
+  @media screen and (max-width: 1000px) {
+    font-size: 70% !important;
+    padding: 2% !important;
+  }
 }

@@ -3,81 +3,41 @@
   background-size: cover;
   position: relative;
   width: 100%;
-  color: #03224c !important;
+  color: #000080;
   display: flex;
-  flex: row nowrap;
-  align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  padding: 3%;
 
   
 
   .link{
     width: 50%;
-    display: flex;
-    justify-content: space-around;
     a{
-      color:white;
+      color: navy;
 
       &:hover{
         color: grey;
       }
     }
     @media screen and (max-width: 1000px) {
-      display: flex;
-      flex-direction: column;
       a{
         width: 100%;
         padding: 0.2em;
       }
     }
-    @media screen and (min-width: 200px) and (max-width: 650px){
+    @media screen and (max-width: 1000px){
       width: 100%;
-      font-size: 0.8em;
-      display: flex;
-      flex-direction: column;
+      font-size: 70%;
       a{
         width: 100%;
         padding: 0.2em;
       }
     }
-  }
-}
-.divicon{
-  margin: 2%;
-}
-.icons{
-  display: flex;
-  justify-content: flex-end;
-  padding: 2%;
-}
-.logo-foot {
-  width: 40%;
-  height: 20%;
-}
-.textfooter{
-  width: 40%;
-  float: right;
-  text-align: justify;
-  @media screen and (min-width: 200px) and (max-width: 650px){
-    font-size: 0.8em;
   }
 }
 
 .linkdiv{
   display: flex;
-  justify-content: space-between;
-  flex: row nowrap;
-  width: 40%;
-}
-
-.menu-foot {
-  color: #03224c !important;
-}
-
-.nav-foot {
-  @media screen and (max-width: 1000px) {
-    padding: 2% !important;
-    width: 150%!important;
-    margin: 5% !important;
-  }
+  justify-content: center;
+  width: 100%;
 }

@@ -1,34 +1,42 @@
-// == Initial State
 const initialState = {
-  message: 'Hello',
+
+  contactFirstName: '',
+  contactLastName: '',
+  contactEmail: '',
+  contactMessage: '',
+  contactPhone: '',
 };
 
 // == Types
-const DO_SOMETHING = 'DO_SOMETHING';
+
+export const ON_SUBMIT_CONTACT = 'ON_SUBMIT_CONTACT';
+const ON_INPUT_CHANGE = 'ON_INPUT_CHANGE';
 
 // == Reducer
 const reducer = (state = initialState, action = {}) => {
   switch (action.type) {
-    case DO_SOMETHING:
+    case ON_INPUT_CHANGE:
       return {
         ...state,
-        message: action.message,
+        [action.name]: action.value,
       };
-
     default:
       return state;
   }
 };
 
 // == Action Creators
-export const doSomething = message => ({
-  type: DO_SOMETHING,
-  message,
+
+export const onInputChange = (name, value) => ({
+  type: ON_INPUT_CHANGE,
+  name,
+  value,
 });
 
 
-// == Selectors
-
+export const onSubmitContact = () => ({
+  type: ON_SUBMIT_CONTACT,
+});
 
 // == Export
 export default reducer;

@@ -3,8 +3,9 @@ import React from 'react';
 import { Route } from 'react-router-dom';
 
 import Header from 'src/components/Header';
-import Body from 'src/components/Body';
+import Home from 'src/components/Home';
 import Footer from 'src/components/Footer';
+import Contact from 'src/containers/Contact';
 
 // == Import : local
 import './app.scss';
@@ -13,7 +14,7 @@ import './app.scss';
 const App = () => (
   <div id="app">
       <Header />
-      <Body />
+      <Contact />
       <Footer />
   </div>
 );

@@ -2,14 +2,14 @@
 import React from 'react';
 
 // == Import : local
-import './body.scss';
+import './home.scss';
 
 // == Composant
-const App = () => (
+const Home = () => (
   <div id="app">
     Salut
   </div>
 );
 
 // == Export
-export default App;
+export default Home;

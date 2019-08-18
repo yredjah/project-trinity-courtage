@@ -34,14 +34,15 @@
     "stylelint": "*",
     "stylelint-config-recommended": "*",
     "uglifyjs-webpack-plugin": "*",
-    "webpack": "*",
-    "webpack-cli": "*",
-    "webpack-dev-server": "*"
+    "webpack": "^4.39.2",
+    "webpack-cli": "^3.3.7",
+    "webpack-dev-server": "^3.8.0"
   },
   "scripts": {
     "test": "mocha --require tests/.setup.js tests/**/*.test.js",
     "test:watch": "mocha --watch --require tests/.setup.js tests/**/*.test.js",
     "start": "webpack-dev-server",
+    "start:server": "node ./server/index.js",
     "clean": "rm -rf dist",
     "clean:all": "rm -rf dist node_modules",
     "build:dev": "NODE_ENV=development webpack",

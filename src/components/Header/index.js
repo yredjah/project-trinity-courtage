@@ -31,7 +31,14 @@ class Header extends Component {
                 >
                   Assurances
                 </Menu.Item>
-
+                <Menu.Item
+                  name='prévoyance'
+                  active={activeItem === 'prévoyance'}
+                  onClick={this.handleItemClick}
+                  className="menu-nav"
+                >
+                  Prévoyance
+                </Menu.Item>
                 <Menu.Item 
                   name='placement-financier' 
                   active={activeItem === 'placement-financier'} 

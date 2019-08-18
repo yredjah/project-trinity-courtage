@@ -13,9 +13,16 @@ import './app.scss';
 // == Composant
 const App = () => (
   <div id="app">
+    <header>
       <Header />
-      <Contact />
+    </header>
+    <main>
+      <Route path="/" exact component={Home} />
+      <Route path="/contact" exact component={Contact} />
+    </main>
+    <footer>
       <Footer />
+    </footer>
   </div>
 );
 

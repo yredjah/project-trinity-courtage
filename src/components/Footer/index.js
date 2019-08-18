@@ -12,9 +12,13 @@ const Footer = () => (
   <div id="footer">
     <div className="linkdiv">
       <div className="link">
-          Nous contacter
+        <Link className="foot-link" to="/contact" exact>
+          Nous Contacter
+        </Link>
           Mention légale
+        <Link className="foot-link" to="/" exact>
           Accueil
+        </Link>
       </div>
     </div>
   </div>

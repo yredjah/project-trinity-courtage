@@ -14,13 +14,13 @@ module.exports = {
     let transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
-        user: 'contactgamenews019@gmail.com', 
-        pass: 'Games123456@', 
+        user: 'trinity.courtage.bot@gmail.com', 
+        pass: 'trinitybot123', 
       }
     });
   
     let info = transporter.sendMail({
-      from: '"Game News" <contactgamenews019@gmail.com>', 
+      from: '"Trinity courtage" <trinity.courtage.bot@gmail.com>', 
       to: "y.redjah@gmail.com", 
       subject: "Contact Message ✔", 
       text: `Vous avez un nouveau message : \n 

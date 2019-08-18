@@ -17,6 +17,7 @@ const logMiddleware = store => next => (action) => {
         contactLastName: store.getState().contactLastName,
         contactEmail: store.getState().contactEmail,
         contactMessage: store.getState().contactMessage,
+        contactPhone: store.getState().contactPhone,
       })
         .then((response) => {
           // console.log(response.data);

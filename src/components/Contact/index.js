@@ -52,7 +52,6 @@ const Contact = ({
         id='form-subcomponent-shorthand-input-phone'
         label='Téléphone'
         name='contactPhone'
-        style={{ minHeight: 10 }}
         placeholder='Téléphone'
       />
     </Form.Group>

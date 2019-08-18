@@ -19,7 +19,7 @@ class Header extends Component {
     return (
       <div className="header">
         <div className="container-header" >
-          <h1 id="title"><img className="logo" src={logo} alt="" /></h1>
+          <Link to="/" exact><h1 id="title"><img className="logo" src={logo} alt="" /></h1></Link>
           <div className="nav">
             <Segment inverted>
               <Menu inverted secondary size='small'>

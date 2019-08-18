@@ -4,7 +4,7 @@ const initialState = {
   contactLastName: '',
   contactEmail: '',
   contactMessage: '',
-  contactPhone: 1,
+  contactPhone: '',
 };
 
 // == Types

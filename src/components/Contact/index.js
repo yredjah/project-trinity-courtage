@@ -88,7 +88,7 @@ Contact.propTypes = {
   contactEmail: PropTypes.string.isRequired,
   InputChange: PropTypes.func.isRequired,
   contactMessage: PropTypes.string.isRequired,
-  contactPhone: PropTypes.number.isRequired,
+  contactPhone: PropTypes.string.isRequired,
   onSubmitContact: PropTypes.func.isRequired,
 };
 

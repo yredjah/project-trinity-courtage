@@ -6,6 +6,7 @@ import Header from 'src/components/Header';
 import Home from 'src/components/Home';
 import Footer from 'src/components/Footer';
 import Contact from 'src/containers/Contact';
+import Legal from 'src/components/Legal';
 
 // == Import : local
 import './app.scss';
@@ -19,6 +20,7 @@ const App = () => (
     <main>
       <Route path="/" exact component={Home} />
       <Route path="/contact" exact component={Contact} />
+      <Route path="/mention_legale" exact component={Legal} />
     </main>
     <footer>
       <Footer />

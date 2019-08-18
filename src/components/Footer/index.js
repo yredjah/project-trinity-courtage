@@ -15,7 +15,9 @@ const Footer = () => (
         <Link className="foot-link" to="/contact" exact>
           Nous Contacter
         </Link>
+        <Link className="foot-link" to="/mention_legale" exact>
           Mention légale
+        </Link>
         <Link className="foot-link" to="/" exact>
           Accueil
         </Link>

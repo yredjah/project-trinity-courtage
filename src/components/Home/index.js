@@ -10,7 +10,7 @@ const Home = () => (
   <div className="home" >
     <div className="elem-home" >
       <div className="homePage-img" width={7}>
-        <img className="home-img" src='/assets/img/finance.jpeg' alt='' />
+        <img className="home-img" src='/assets/img/home.jpeg' alt='' />
       </div>
       <div className="homePage-text" width={10}>
         <h2 className="home-title" >Qui sommes nous ?</h2>

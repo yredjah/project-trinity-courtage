@@ -1,7 +1,7 @@
 .header {
   width: 100%;
   height: 10%;
-  background-image: url('/assets/img/eau.jpeg');
+  background-image: url('/assets/img/blue.jpeg');
   background-size: cover;
   @media screen and (max-width: 1000px) {
     display: flex;
@@ -45,7 +45,6 @@
 .menu-nav {
   color: #03224c !important;
   @media screen and (max-width: 1000px) {
-    font-size: 65% !important;
-    padding: 2% !important;
+    font-size: 60% !important;
   }
 }

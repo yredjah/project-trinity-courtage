@@ -23,39 +23,56 @@ class Header extends Component {
           <div className="nav">
             <Segment inverted>
               <Menu inverted secondary size='small'>
-                <Menu.Item
-                  name='assurances'
-                  active={activeItem === 'assurances'}
-                  onClick={this.handleItemClick}
-                  className="menu-nav"
-                >
-                  Assurances
-                </Menu.Item>
-                <Menu.Item
-                  name='prévoyance'
-                  active={activeItem === 'prévoyance'}
-                  onClick={this.handleItemClick}
-                  className="menu-nav"
-                >
-                  Prévoyance
-                </Menu.Item>
-                <Menu.Item 
-                  name='placement-financier' 
-                  active={activeItem === 'placement-financier'} 
-                  onClick={this.handleItemClick}
-                  className="menu-nav"
-                >
-                  Placement financier
-                </Menu.Item>
-
-                <Menu.Item
-                  name='immobilier'
-                  active={activeItem === 'immobilier'}
-                  onClick={this.handleItemClick}
-                  className="menu-nav"
-                >
-                  Immobilier
-                </Menu.Item>
+                <Link to="/assurances" exact>
+                  <Menu.Item
+                    name='assurances'
+                    active={activeItem === 'assurances'}
+                    onClick={this.handleItemClick}
+                    className="menu-nav"
+                  >
+                    Assurances
+                  </Menu.Item>
+                </Link>
+                <Link to="/finance" exact>
+                  <Menu.Item 
+                    name='placement-financier' 
+                    active={activeItem === 'placement-financier'} 
+                    onClick={this.handleItemClick}
+                    className="menu-nav"
+                  >
+                    Placement financier
+                  </Menu.Item>
+                </Link>
+                <Link to="/retraite" exact>
+                  <Menu.Item
+                    name='retraite'
+                    active={activeItem === 'retraite'}
+                    onClick={this.handleItemClick}
+                    className="menu-nav"
+                  >
+                    Retraite
+                  </Menu.Item>
+                </Link>
+                <Link to="/sante_prevoyance" exact>
+                  <Menu.Item
+                    name='santé-prévoyance'
+                    active={activeItem === 'santé-prévoyance'}
+                    onClick={this.handleItemClick}
+                    className="menu-nav"
+                  >
+                    Santé / Prévoyance
+                  </Menu.Item>
+                </Link>
+                <Link to="/assurance_de_pret" exact>
+                  <Menu.Item
+                    name='assurance-de-prêt'
+                    active={activeItem === 'assurance-de-prêt'}
+                    onClick={this.handleItemClick}
+                    className="menu-nav"
+                  >
+                    Assurance de prêt
+                  </Menu.Item>
+                </Link>
               </Menu>
             </Segment>
           </div>

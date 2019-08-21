@@ -1,86 +1,62 @@
 // == Import : npm
-import React, { Component } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, Segment, Button } from 'semantic-ui-react';
+import PropTypes from 'prop-types';
 import logo from './logo.png';
 // == Import : local
 import './header.scss';
 
 // == Composants
 
-class Header extends Component {
-  state = {}
+const Header = ({ 
+  nav, 
+  setItem, 
+  activeItem,  
+}) => {
 
-  handleItemClick = (e, { name }) => this.setState({ activeItem: name })
+  const handleItemClick = (e, { name }) => setItem(name);
 
-  render() {
-    const { activeItem } = this.state;
-
-    return (
-      <div className="header">
-        <div className="container-header" >
-          <Link to="/" exact><h1 id="title"><img className="logo" src={logo} alt="" /></h1></Link>
-          <div className="nav">
-            <Segment inverted>
-              <Menu inverted secondary size='small'>
-                <Link to="/assurances" exact>
+  return (
+    <div className="header">
+      <div className="container-header" >
+        <Link to="/" exact><h1 id="title"><img className="logo" src={logo} alt="" /></h1></Link>
+        <div className="nav">
+          <Segment inverted>
+            <Menu inverted secondary size='small'>
+              {nav.map(nav => (
+                <Link to={nav.route} exact>
                   <Menu.Item
-                    name='assurances'
-                    active={activeItem === 'assurances'}
-                    onClick={this.handleItemClick}
+                    key={nav.id}
+                    name={nav.name}
+                    active={activeItem === nav.name}
+                    onClick={handleItemClick}
                     className="menu-nav"
                   >
-                    Assurances
+                    {nav.title}
                   </Menu.Item>
                 </Link>
-                <Link to="/finance" exact>
-                  <Menu.Item 
-                    name='placement-financier' 
-                    active={activeItem === 'placement-financier'} 
-                    onClick={this.handleItemClick}
-                    className="menu-nav"
-                  >
-                    Placement financier
-                  </Menu.Item>
-                </Link>
-                <Link to="/retraite" exact>
-                  <Menu.Item
-                    name='retraite'
-                    active={activeItem === 'retraite'}
-                    onClick={this.handleItemClick}
-                    className="menu-nav"
-                  >
-                    Retraite
-                  </Menu.Item>
-                </Link>
-                <Link to="/sante_prevoyance" exact>
-                  <Menu.Item
-                    name='santé-prévoyance'
-                    active={activeItem === 'santé-prévoyance'}
-                    onClick={this.handleItemClick}
-                    className="menu-nav"
-                  >
-                    Santé / Prévoyance
-                  </Menu.Item>
-                </Link>
-                <Link to="/assurance_de_pret" exact>
-                  <Menu.Item
-                    name='assurance-de-prêt'
-                    active={activeItem === 'assurance-de-prêt'}
-                    onClick={this.handleItemClick}
-                    className="menu-nav"
-                  >
-                    Assurance de prêt
-                  </Menu.Item>
-                </Link>
-              </Menu>
-            </Segment>
-          </div>
+              ))}
+            </Menu>
+          </Segment>
         </div>
       </div>
-    )
-  }
+    </div>
+  )
 }
+
+Header.propTypes = {
+  activeItem: PropTypes.string.isRequired,
+  setItem: PropTypes.func.isRequired,
+  nav: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      title: PropTypes.string.isRequired,
+      route: PropTypes.string.isRequired,
+    })
+  ).isRequired,
+};
 
 // == Export
 export default Header; 

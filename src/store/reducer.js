@@ -1,6 +1,11 @@
 import partnerLogo from 'src/data';
+import navItem from 'src/components/Header/data'
 
 const initialState = {
+
+  nav: navItem,
+
+  activeItem: 'home',
 
   logo: partnerLogo, 
 
@@ -16,6 +21,8 @@ const initialState = {
 export const ON_SUBMIT_CONTACT = 'ON_SUBMIT_CONTACT';
 const ON_INPUT_CHANGE = 'ON_INPUT_CHANGE';
 const GET_PARTNERS_LOGO = 'GET_PARTNERS_LOGO';
+const GET_NAV_BUTTON = 'GET_NAV_BUTTON'; 
+const SET_ACTIVE_ITEM = 'SET_ACTIVE_ITEM';
 
 // == Reducer
 const reducer = (state = initialState, action = {}) => {
@@ -33,6 +40,19 @@ const reducer = (state = initialState, action = {}) => {
           ...state.logo,
           action.image,
         ],
+      };
+    case GET_NAV_BUTTON:
+      return {
+        ...state,
+        nav: [
+          ...state.nav,
+          action.name,
+        ],
+      };
+    case SET_ACTIVE_ITEM:
+      return {
+        ...state,
+        activeItem: action.name,
       };
     default:
       return state;
@@ -57,6 +77,15 @@ export const logoPartners = (image) => ({
   image,
 });
 
+export const getNavButton = (name) => ({
+  type: GET_NAV_BUTTON,
+  name,
+});
+
+export const setActiveItem = (name) => ({
+  type: SET_ACTIVE_ITEM,
+  name,
+});
 
 // == Export
 export default reducer;
